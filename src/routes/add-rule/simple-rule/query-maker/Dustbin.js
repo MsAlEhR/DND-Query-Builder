@@ -28,7 +28,8 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
     const [item, setItem] = useState({})
     const [operand, setOperand] = useState(" ")
     const [borderColor, setBorderColor] = useState('rgba(0,0,0,0.2)');
-    const AllOperator={...baseInfo.relationalOperator,...baseInfo.comparativeOperator,...baseInfo.arithmeticOperator}
+
+    const AllOperator ={...baseInfo.relationalOperator,...baseInfo.comparativeOperator,...baseInfo.arithmeticOperator}
 
     const handleBorder = useCallback(color => setBorderColor(color));
 
@@ -51,7 +52,7 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
 
                 let dustbinSt = dustbin;
                 dustbinList.map(dust=>
-                  dustbinSt[dust]= {...dust, hasParent: true, parent: id}
+                    dustbinSt[dust]= {...dust, hasParent: true, parent: id}
                 );
                 Object.keys(dustbinSt).map(dust=> dustbinSt[dust].last = dust === id)
                 dustbinSt[id]={...dustbinSt[id],sign:"true"};
@@ -101,7 +102,7 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
         let dustFilter2 ={};
         // let listFilter = Object.keys(dustbinSt).filter(dust=> dust != id)
         // listFilter.forEach(i=> dustFilter[i]=dustbinSt[i])
-        const dustbinID = dustbinSt[id].id? {
+        const dustbinID = dustbinSt[id].id && dustbinSt[id]["@type"] ==='SYSTEM' && dustbinSt[id]["@type"] ==='CUSTOM'? {
             id: dustbinSt[id].id,
             title: dustbinSt[id].title,
             value: dustbinSt[id].value,
@@ -109,9 +110,9 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
             version: dustbinSt[id].version,
             "@type":dustbinSt[id]["@type"]} :{};
         dustbinSt[id]= id !=="0" ?
-                               {hasParent: dustbinSt[id].hasParent,parent: dustbinSt[id].parent,sign:false,last:false,...dustbinID}
-                               :
-                               {hasParent: dustbinSt[id].hasParent};
+            {hasParent: dustbinSt[id].hasParent,parent: dustbinSt[id].parent,sign:false,last:false,...dustbinID}
+            :
+            {hasParent: dustbinSt[id].hasParent};
 
         let listTree = [id];
 
@@ -143,6 +144,7 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
         setBoxes(boxesValue);
         setDustbin(dustFilter2);
         handleBorder('rgba(0,0,0,0.2)');
+
 
     };
 
@@ -179,9 +181,9 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
     const queryCheck=() =>{
 
         if(    dustbin[id].parent &&
-          Object.values(Object.keys(baseInfo.arithmeticOperator)).includes(
-            dustbin[dustbin[id].parent].operator
-          )){
+            Object.values(Object.keys(baseInfo.arithmeticOperator)).includes(
+                dustbin[dustbin[id].parent].operator
+            )){
             // console.log(dustbin,boxes,"duu")
             deleteBox();
             setHasDroppedOnChild(false);
@@ -191,7 +193,6 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
 
 
     };
-    console.log(dustbin,"DDDdd")
 
     return (
 
@@ -203,39 +204,39 @@ const Dustbin = ({ greedy, children,boxes,setBoxes , moveBox,id,dustbin,setDustb
              onMouseLeave={onMouseLeave}>
 
             {dustbin[id] && dustbin[id].last && hasDroppedOnChild ?
-              <ModalOperator
-                selectOperator={operator => selectOperator(operator)}
-                onCloseModalOperator={onCloseModalOperator}
-                operatorType={type=>operatorType(type)}
-                dir={dir}
-                dustbin={dustbin}
-                id={id}
-                baseInfo={baseInfo}
-                intl={intl}
-                open={ dustbin[id].last }/> :
-              null}
+                <ModalOperator
+                    selectOperator={operator => selectOperator(operator)}
+                    onCloseModalOperator={onCloseModalOperator}
+                    operatorType={type=>operatorType(type)}
+                    dir={dir}
+                    dustbin={dustbin}
+                    baseInfo={baseInfo}
+                    id={id}
+                    intl={intl}
+                    open={ dustbin[id].last }/> :
+                null}
 
             {dustbin[id] && dustbin[id].sign ?
-              (<Chip  variant={"outlined"}
-                      size ="small"
-                      color={"primary"}
-                      label={AllOperator[dustbin[id].operator]}
-                      onDelete={deleteBox}/>):
-              <span>{operand}{id}</span>}
+                (<Chip  variant={"outlined"}
+                        size ="small"
+                        color={"primary"}
+                        label={AllOperator[dustbin[id].operator]}
+                        onDelete={deleteBox}/>):
+                <span>{operand}{id}</span>}
 
-              {operand===id && possibleDust.includes(id)  ?
-              <ModalOperand intl={intl}
-                            open={operand===id}
-                            setOperand={setOperand}
-                            operand={operand}
-                            onCancelOperand={a=>onCancelOperand(a)}
-                            dustbin={dustbin}
-                            baseInfo={baseInfo}
-                            forceUpdateBox={forceUpdateBox}
-                            setDustbin={setDustbin}/> :
-              null}
+            {operand===id && possibleDust.includes(id)  ?
+                <ModalOperand intl={intl}
+                              open={operand===id}
+                              setOperand={setOperand}
+                              operand={operand}
+                              baseInfo={baseInfo}
+                              onCancelOperand={a=>onCancelOperand(a)}
+                              dustbin={dustbin}
+                              forceUpdateBox={forceUpdateBox}
+                              setDustbin={setDustbin}/> :
+                null}
 
-              <br />
+            <br />
             <div>{children}</div>
         </div>
     )

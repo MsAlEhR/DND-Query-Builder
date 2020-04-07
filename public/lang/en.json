@@ -72,7 +72,7 @@
   "page.AddRule.workMode": "Work Mode",
   "page.AddRule.weight": "Weight ",
   "page.AddRule.description": "Description ",
-  "page.AddRule.numOperator": " Number Operator ",
+  "page.AddRule.numOperator": " Number of operator ",
   "page.AddRule.ruleCharacter": "Rule character ",
   "page.AddRule.createRule": "Create rule",
   "page.AddRule.checkRule": "Check rule",

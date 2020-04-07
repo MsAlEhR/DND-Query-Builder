@@ -194,16 +194,16 @@ class ModalOperator extends React.Component {
 
           <CmpDialogActions>
             <CmpIconButton
-              caption={intl.formatMessage({ id: "keywords.confirm" })}
-              iconType="accept"
-              disabled={this.state.operand === " "}
-              onClick={this.handleSave}
-            />
-            <CmpIconButton
               caption={intl.formatMessage({ id: "keywords.cancel" })}
               iconType="reject"
               onClick={this.handleClose}
             />
+              <CmpIconButton
+                  caption={intl.formatMessage({ id: "keywords.confirm" })}
+                  iconType="accept"
+                  disabled={this.state.operand === " "}
+                  onClick={this.handleSave}
+              />
           </CmpDialogActions>
         </CmpFontWrapper>
       </CmpDialog>

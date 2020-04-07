@@ -22,7 +22,6 @@ class ModalOperand extends React.Component {
     super(props);
     this.state = {
       open: props.open,
-      literalCategory: " ",
       operandValues: {
         title: props.dustbin[props.operand].title
           ? props.dustbin[props.operand].title
@@ -43,7 +42,6 @@ class ModalOperand extends React.Component {
             : props.dustbin[props.operand].value
           : " "
       }
-      // paramType: "SystemParamModel"
     };
   }
   submitParameter = values => {
@@ -52,14 +50,8 @@ class ModalOperand extends React.Component {
       ...this.props.dustbin[this.props.operand],
       title: values.title,
       "@type": values.paramType,
-      valueType:
-        values.paramType === "SYSTEM"
-          ? { id: values.valueType }
-          : values.valueType,
-      value:
-        values.paramType === "SYSTEM"
-          ? { id: values.value }
-          : values.valueType === "NUMBER"
+      valueType: values.valueType,
+      value: values.valueType === "NUMBER"
           ? Number(values.value)
           : values.value
     };
@@ -72,12 +64,10 @@ class ModalOperand extends React.Component {
     e.stopPropagation();
     this.props.setOperand(" ");
     this.props.forceUpdateBox();
-    // this.props.onCancelOperand(" ");
-    // this.setState({ open: false });
+
   };
 
   render() {
-    console.log(this.props.dustbin[this.props.operand], "onmodalOperand");
     const { dir, intl, style } = this.props;
     return (
       <CmpDialog open={this.state.open} style={style} onClose={this.cancel}>
@@ -85,10 +75,9 @@ class ModalOperand extends React.Component {
           <Formik
             onSubmit={values => this.submitParameter(values)}
             initialValues={this.state.operandValues}
-            // validate={validate(getFormValidationSchema, intl)}
           >
-            <Form name="my" style={{ width: "100%" }}>
-              <CmpDialogTitle>
+            <Form dir={dir} name="my" style={{ width: "100%" }}>
+              <CmpDialogTitle dir={dir}>
                 {intl.formatMessage({
                   id: "page.AddRule.ModalOperand.title"
                 })}
@@ -113,47 +102,14 @@ class ModalOperand extends React.Component {
                       )}
                     />
                   </Grid>{" "}
-                  {/*<Grid item xs={6}>*/}
-                    {/*<Field*/}
-                      {/*name="paramType"*/}
-                      {/*as="select"*/}
-                      {/*render={({ field, form }) => (*/}
-                        {/*<CmpFormSelect*/}
-                          {/*label={intl.formatMessage({*/}
-                            {/*id: "page.AddRule.ModalOperand.paramType"*/}
-                          {/*})}*/}
-                          {/*className={s.select}*/}
-                          {/*value={field.value}*/}
-                          {/*onChange={type => {*/}
-                            {/*form.setFieldValue("paramType", type);*/}
-                            {/*this.setState({*/}
-                              {/*operandValues: {*/}
-                                {/*...this.state.operandValues,*/}
-                                {/*paramType: type,*/}
-                                {/*valueType: " "*/}
-                              {/*}*/}
-                            {/*});*/}
-                          {/*}}*/}
-                          {/*errorMessageFieldName="paramType"*/}
-                        {/*>*/}
-                          {/*{Object.keys(this.props.baseInfo.paramTypes).map(*/}
-                            {/*(op, index) => (*/}
-                              {/*<MenuItem key={index} value={op}>*/}
-                                {/*{this.props.baseInfo.paramTypes[op]}*/}
-                              {/*</MenuItem>*/}
-                            {/*)*/}
-                          {/*)}*/}
-                        {/*</CmpFormSelect>*/}
-                      {/*)}*/}
-                    {/*/>*/}
-                  {/*</Grid>*/}
                     <Grid item xs={6}>
                       <Field
                         name="valueType"
                         as="select"
                         render={({ field, form }) => (
                           <CmpFormSelect
-                            label={intl.formatMessage({
+                              labelWidth={140}
+                              label={intl.formatMessage({
                               id: "page.AddRule.ModalOperand.valueType"
                             })}
                             className={s.select}
@@ -224,26 +180,11 @@ function findCategoryId(id, systemLiteral) {
   }
 }
 
-function getFormValidationSchema(values, intl) {
-  return Yup.object().shape({
-    name: Yup.string()
-      .nullable()
-      .required(
-        intl.formatMessage({ id: "validation.general.nameIsRequired" })
-      ),
-    title: Yup.string()
-      .nullable()
-      .required(
-        intl.formatMessage({ id: "validation.general.titleIsRequired" })
-      )
-  });
-}
 
 const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // editServiceAuthority: serviceAuthority => dispatch(edit(serviceAuthority))
 });
 
 export default injectIntl(

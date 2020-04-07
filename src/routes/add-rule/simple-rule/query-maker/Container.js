@@ -142,19 +142,19 @@ const Container = ({
             {intl.formatMessage({ id: "page.AddRule.numOperator" })}
           </div>
           <span />
+            <IconButton
+                size="small"
+                variant="text"
+                onClick={() => handleArrow("left")}
+            >
+                <RemoveCircle />
+            </IconButton>
           <IconButton
             size="small"
             variant="text"
             onClick={() => handleArrow("right")}
           >
             <AddCircle />
-          </IconButton>
-          <IconButton
-            size="small"
-            variant="text"
-            onClick={() => handleArrow("left")}
-          >
-            <RemoveCircle />
           </IconButton>
         </div>
         <Grid container direction="column" justify="center" alignItems="center">

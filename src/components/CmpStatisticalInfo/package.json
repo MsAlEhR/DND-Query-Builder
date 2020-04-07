@@ -1,0 +1,6 @@
+{
+  "name": "CmpStatisticalInfo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CmpStatisticalInfo.js"
+}

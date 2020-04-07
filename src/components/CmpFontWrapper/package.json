@@ -1,0 +1,6 @@
+{
+  "name": "CmpFontWrapper",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CmpFontWrapper.js"
+}

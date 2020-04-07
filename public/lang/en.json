@@ -1,0 +1,140 @@
+{
+  "AppTitle": "Kavosh Fraud Detection System  ",
+  "keywords.isc": "Informatics Services Corporation",
+  "keywords.application": "Application",
+  "keywords.applications": "Applications",
+  "keywords.roleGroup": "Role Group",
+  "keywords.role": "Role",
+  "keywords.user": "User",
+  "keywords.add": "Add",
+  "keywords.delete": "Delete",
+  "keywords.edit": "Edit",
+  "keywords.save": "Save",
+  "keywords.confirm": "Confirm",
+  "keywords.cancel": "Cancel",
+  "keywords.reset": "Reset",
+  "keywords.name": "Name",
+  "keywords.title": "Title",
+  "keywords.next": "Next",
+  "keywords.previous": "Previous",
+  "keywords.order": "Order",
+  "keywords.description": "Description",
+  "keywords.appToken": "Application Token",
+  "keywords.agree": "Agree",
+  "keywords.disagree": "Disagree",
+  "keywords.initialValue": "Initial Value ",
+  "keywords.expression": "Expression",
+  "keywords.operation": "Operations",
+  "keywords.warning": "Warning",
+  "keywords.search1": "Search...",
+  "keywords.search2": "Search",
+  "keywords.active": "Active",
+  "keywords.inactive": "Inactive",
+  "keywords.image": "Image",
+  "keywords.logout": "Logout",
+  "keywords.setting": "Setting",
+  "keywords.checkAll": "Select all",
+  "keywords.uncheckAll": "Deselect all",
+  "keywords.nothing": "None",
+  "keywords.dashboard": "dashboard",
+  "keywords.details": "Details",
+  "keywords.type": "Type",
+  "keywords.status": "Status",
+
+
+  "message.errorInThisPart": "An error has been occurred in this part",
+  "page.dashboard.users": "ًRoles and Users administration",
+
+
+  "page.ruleManagement.title": "Rule Management ",
+  "page.ruleManagement.rules": " Rules",
+  "page.ruleManagement.addRule": "Add Rule",
+  "page.ruleManagement.listRules": "Rules List ",
+  "page.ruleManagement.rule": "Rule ",
+
+  "page.behaviorManagement.behaviors": "Behaviors",
+  "page.behaviorManagement.addBehavior": "Add Behavior",
+  "page.AddBehavior.behaviorCharacter":"Behavior Character" ,
+  "page.AddBehavior.createBehavior": "Create Behavior",
+  "page.AddBehavior.checkBehavior":" Check Behavior" ,
+  "page.AddBehavior.updateQuery": "Update Query",
+  "page.AddBehavior.table": "Table Name",
+  "page.AddBehavior.behaviorType": "B‌ehavior Type",
+  "page.AddBehavior.indexList": "Add Index",
+
+
+  "page.AddRule.title": "Add Rule ",
+  "page.AddRule.RuleCode": " Rule code",
+  "page.AddRule.RuleName": "Rule name",
+  "page.AddRule.Situation": "Situation",
+  "page.AddRule.Entity": "Entity ",
+  "page.AddRule.classType": "Class Type ",
+  "page.AddRule.workMode": "Work Mode",
+  "page.AddRule.weight": "Weight ",
+  "page.AddRule.description": "Description ",
+  "page.AddRule.numOperator": " Number Operator ",
+  "page.AddRule.ruleCharacter": "Rule character ",
+  "page.AddRule.createRule": "Create rule",
+  "page.AddRule.checkRule": "Check rule",
+  "page.AddRule.ModalOperator.title": "Please select your operand",
+  "page.AddRule.ModalOperator.OperandType": "Operand type",
+  "page.AddRule.ModalOperator.ComparativeExpressionModel": "ComparativeExpression",
+  "page.AddRule.ModalOperator.RelationalExpressionModel": "RelationalExpression",
+  "page.AddRule.ModalOperator.MathOperand": "MathOperand",
+  "page.AddRule.ruleType": "Choose your query type ?",
+  "page.AddRule.simpleRule": "Simple Rule",
+  "page.AddRule.complexRule": "Complex Rule ‍",
+  "page.AddRule.query": "Query ‍",
+  "page.AddRule.queryType": " Query Type  ‍",
+  "page.AddRule.parameter": "Parameters",
+  "page.AddRule.Behaviors": "Behaviors",
+
+  "page.AddRule.ModalOperand.title": "Operand definition",
+  "page.AddRule.ModalOperand.priority": "Operand Priority",
+  "page.AddRule.ModalOperand.paramType": "Parameter Type",
+  "page.AddRule.ModalOperand.valueType": "Value Type",
+  "page.AddRule.ModalOperator.system": "System",
+  "page.AddRule.ModalOperator.‌custom": "Custom",
+
+
+  "validation.fillField" : "Please fill field",
+
+
+
+
+
+
+
+
+  "queryBuilder.title": "DND Query Builder",
+  "queryBuilder.start": "Start Application",
+  "queryBuilder.ModalOperator.title": "Operator",
+
+
+
+
+
+
+
+
+
+
+
+
+  "page.login.label": "Login",
+  "page.login.username": "Username",
+  "page.login.password": "Password",
+  "page.login.login": "Login",
+  "page.notAuthorized.unauthorizedAccessTitle": "Unauthorized Access",
+  "page.notAuthorized.unauthorizedAccessDesc": "you have attempted to access a page that you are not authorized to view",
+  "component.application.delete.message": "Delete this application?",
+  "component.table.filterRow.filter": "Filter...",
+  "component.table.filterRow.contains": "Contains",
+  "component.table.filterRow.notContains": "Does not contain",
+  "component.table.filterRow.startsWith": "Starts with",
+  "component.table.filterRow.endsWith": "Ends with",
+  "component.table.filterRow.equal": "Equals",
+  "component.table.filterRow.notEqual": "Does not equal",
+  "component.imageUpload.imageCondition": "Image must be in PNG or JPEG format and its size must be lower than 300 kb",
+  "component.footer.currentUser": "Current user"
+}

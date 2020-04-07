@@ -1,0 +1,19 @@
+
+body {
+  background-color: #ededee;
+}
+
+@font-face {
+  font-family: 'yekan';
+  src: url('../font/web_Yekan.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0600-06FF;
+}
+
+@font-face {
+  font-family: 'yekannums';
+  src: url('../font/yekannumbers.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}

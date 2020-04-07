@@ -1,0 +1,46 @@
+
+.pick-list {
+    /*width: 1000px;*/
+}
+
+.pick-list-header {}
+
+.pick-list-content {
+    height: 350px;
+    overflow: auto;
+}
+
+.main-list-wrapper {
+    /*display: inline-block;*/
+    /*width: 45%;*/
+    /*vertical-align: top;*/
+}
+
+.selected-list-wrapper {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+.buttons-wrapper {
+    display: inline-block;
+    width: 10%;
+    vertical-align: top;
+    top: 120px;
+    position: relative;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.list-item {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.list-item-checkbox {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}

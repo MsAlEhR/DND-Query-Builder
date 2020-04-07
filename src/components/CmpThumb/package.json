@@ -1,0 +1,6 @@
+{
+  "name": "CmpThumb",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CmpThumb.js"
+}

@@ -1,0 +1,61 @@
+
+.form {
+    display: grid;
+    width: 60%;
+    margin: 0 auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.name {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.lastname {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.email {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.username {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.password {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.password-confirm {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.status {
+    grid-row: 5;
+    grid-column: 1;
+}
+
+.role {
+    grid-row: 6;
+    grid-column: 1;
+}
+
+.select {
+    min-width: 100%;
+}
+
+.delimiter {
+
+}
+
+.stepper{
+    border: #00bbff;
+}
+

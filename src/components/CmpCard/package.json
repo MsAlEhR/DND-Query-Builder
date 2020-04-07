@@ -1,0 +1,6 @@
+{
+  "name": "CmpCard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CmpCard.js"
+}

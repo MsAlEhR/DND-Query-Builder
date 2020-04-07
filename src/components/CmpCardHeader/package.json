@@ -1,0 +1,6 @@
+{
+  "name": "CmpCardHeader",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CmpCardHeader.js"
+}

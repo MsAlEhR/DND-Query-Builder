@@ -1,0 +1,40 @@
+
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 100px auto;
+  height: 100px;
+}
+
+.icon-wrapper {
+  background-color: #3b5998;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+.info-wrapper {
+  background-color: #55acee;
+}
+
+.title {
+  text-align: center;
+
+  /* height: 50px; */
+  color: floralwhite;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.title-link {
+  cursor: pointer;
+}
+
+.value {
+  font-weight: bold;
+  text-align: center;
+
+  /* height: 50px; */
+  color: linen;
+  font-size: 36px;
+}

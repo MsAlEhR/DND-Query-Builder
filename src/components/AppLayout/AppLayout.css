@@ -1,0 +1,7 @@
+.rtl-font * {
+  font-family: yekan, yekannums, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+
+.ltr-font * {
+  /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+}

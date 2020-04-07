@@ -1,0 +1,68 @@
+
+.panel {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+}
+
+.app-entity-info {
+    width: 300px;
+}
+
+.app-entity-table {
+    padding: 30px;
+}
+
+.main-card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-card-header {
+    background-color: cadetblue;
+}
+
+.main-card-header-title {
+    color: white;
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.main-card-content {}
+
+.main-card-actions {
+    background-color: cadetblue;
+}
+
+.part-card {
+    margin-bottom: 20px;
+}
+
+.part-card-header {
+    background-color: cadetblue;
+    padding: 5px 24px;
+}
+
+.part-card-header-title {
+    color: white;
+}
+
+.select{
+    min-width: 200px
+}
+
+.select-op {
+    min-width: 100%;
+}
+
+
+.rtl-font * {
+    font-family: yekan, yekannums, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+
+.ltr-font * {
+    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
+}
+

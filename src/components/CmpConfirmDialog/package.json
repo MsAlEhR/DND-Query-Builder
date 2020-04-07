@@ -1,0 +1,6 @@
+{
+  "name": "CmpConfirmDialog",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CmpConfirmDialog.js"
+}

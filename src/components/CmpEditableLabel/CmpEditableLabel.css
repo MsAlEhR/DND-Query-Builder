@@ -1,0 +1,46 @@
+
+
+.header-avatar {
+  background-color: white;
+}
+
+.app-icon svg {
+  font-size: 100px;
+}
+
+
+.header-text-link {
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.header {
+  background-color: cadetblue;
+  text-align: center;
+}
+
+.actions {
+  background-color: cadetblue;
+  height: 50px;
+}
+
+.action-icon {
+  color: white;
+}
+
+.application {
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  top: 4px;
+  position: relative;
+}
+
+.oper-icon {
+  font-size: 20px;
+  cursor: pointer;
+}

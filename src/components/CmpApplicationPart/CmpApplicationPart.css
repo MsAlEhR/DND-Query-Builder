@@ -1,0 +1,24 @@
+
+.header-avatar {
+  /*background-color: white;*/
+}
+
+.app-icon svg {
+  font-size: 100px;
+}
+
+.app-icon-wrapper {
+  text-align: center;
+}
+
+.header-text-link {
+  font-size: 22px;
+  text-decoration: none;
+  /*color: white;*/
+  font-weight: bolder;
+}
+
+.header {
+  /*background-color: cadetblue;*/
+  text-align: center;
+}

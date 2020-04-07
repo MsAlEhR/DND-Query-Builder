@@ -1,0 +1,6 @@
+{
+  "name": "RTL",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./RTL.js"
+}

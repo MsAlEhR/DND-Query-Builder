@@ -1,0 +1,8 @@
+
+.tree  div[class~=rst__rowContents] {
+  box-shadow: unset;
+}
+
+.tree  div[class~=rst__moveHandle] {
+  box-shadow: unset;
+}
